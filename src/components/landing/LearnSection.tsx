@@ -39,7 +39,7 @@ const LearnSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${kasimTalking})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/92 via-[#1a1a1a]/88 to-[#1a1a1a]/92" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/75 to-[#1a1a1a]/80" />
 
       <div className="relative z-10 container mx-auto px-6 max-w-5xl">
         <motion.div
