@@ -39,7 +39,7 @@ const LearnSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${kasimTalking})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/95 via-[#0D0D0D]/90 to-[#0D0D0D]/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/92 via-[#1a1a1a]/88 to-[#1a1a1a]/92" />
 
       <div className="relative z-10 container mx-auto px-6 max-w-5xl">
         <motion.div
@@ -60,7 +60,7 @@ const LearnSection = () => {
           {modules.map((mod, i) => (
             <motion.div
               key={i}
-              className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 relative overflow-hidden group"
+              className="bg-white/15 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 relative overflow-hidden group shadow-xl shadow-black/40"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,13 +70,13 @@ const LearnSection = () => {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
               
               <div className="text-3xl mb-3">{mod.icon}</div>
-              <span className="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 border border-primary/30">
+              <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-4 shadow-md">
                 Module {i + 1}
               </span>
               <h3 className="text-lg font-bold text-white mb-4">{mod.title}</h3>
               <ul className="space-y-3">
                 {mod.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-white/80">
+                  <li key={j} className="flex items-start gap-2 text-sm text-white/90">
                     <span className="text-green-400 mt-0.5 font-bold">✓</span>
                     <span className="font-serif">{item}</span>
                   </li>
