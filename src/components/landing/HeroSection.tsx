@@ -15,9 +15,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/50" />
 
       {/* Header / Logo — white background */}
-      <header className="relative z-20 bg-white shadow-md">
-        <div className="container mx-auto flex items-center justify-between py-4 px-6">
-          <img src={kasimLogo} alt="Kasim Aslam" className="h-10 md:h-12" />
+      <header className="relative z-20 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div className="container mx-auto flex items-center justify-between py-2 px-6">
+          <img src={kasimLogo} alt="Kasim Aslam" className="h-8 md:h-10" />
           <Button variant="cta" size="sm" className="px-6 py-2 text-sm">
             Save My Seat
           </Button>

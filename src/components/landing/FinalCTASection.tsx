@@ -82,20 +82,6 @@ const FinalCTASection = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          className="mt-12 text-center max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <p className="text-foreground/60 font-serif italic text-lg leading-relaxed">
-            The question isn't whether you can delegate.
-          </p>
-          <p className="text-foreground font-black text-xl md:text-2xl mt-2">
-            It's whether you're willing to learn how.
-          </p>
-        </motion.div>
       </div>
     </section>
   );
