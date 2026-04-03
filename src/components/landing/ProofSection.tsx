@@ -22,7 +22,7 @@ const ProofSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-white/60 font-serif italic text-lg">
+          <p className="text-white/70 font-serif italic text-lg">
             I didn't learn this from a book.
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white mt-2">
@@ -34,14 +34,14 @@ const ProofSection = () => {
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 shadow-xl shadow-black/30"
+              className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-2xl shadow-black/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <p className="text-4xl md:text-5xl font-black text-primary">{stat.value}</p>
-              <p className="mt-2 text-white/80 text-sm font-semibold">{stat.label}</p>
+              <p className="mt-2 text-white/90 text-sm font-semibold">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -53,13 +53,13 @@ const ProofSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-white/70 text-sm font-semibold uppercase tracking-wide mb-6">I've:</p>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl px-8 py-6 max-w-md mx-auto shadow-xl">
+          <p className="text-white/80 text-sm font-semibold uppercase tracking-wide mb-6">I've:</p>
+          <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-6 max-w-md mx-auto shadow-2xl shadow-black/50">
             <ul className="space-y-3">
               {achievements.map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-white">
-                  <span className="text-green-400 font-bold">✓</span>
-                  <span className="font-semibold">{item}</span>
+                <li key={i} className="flex items-start gap-3 text-white">
+                  <span className="text-green-400 font-bold shrink-0 mt-0.5">✓</span>
+                  <span className="font-semibold text-left">{item}</span>
                 </li>
               ))}
             </ul>
