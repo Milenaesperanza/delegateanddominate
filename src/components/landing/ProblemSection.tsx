@@ -8,7 +8,7 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-foreground">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-foreground to-secondary">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,34 +24,36 @@ const ProblemSection = () => {
 
           <p className="mt-8 text-lg text-background/70 font-serif">Because you're:</p>
 
-          <ul className="mt-6 space-y-4 text-left max-w-md mx-auto">
+          <div className="mt-8 space-y-4 max-w-md mx-auto">
             {problems.map((item, i) => (
-              <motion.li
+              <motion.div
                 key={i}
-                className="flex items-start gap-3 text-background/80"
+                className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-xl px-6 py-4 text-left flex items-start gap-3"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.4 }}
               >
-                <span className="text-primary mt-1 text-lg">✗</span>
-                <span className="font-medium">{item}</span>
-              </motion.li>
+                <span className="text-primary mt-0.5 text-lg font-bold">✗</span>
+                <span className="text-background/80 font-medium">{item}</span>
+              </motion.div>
             ))}
-          </ul>
+          </div>
 
           <div className="mt-12 space-y-4">
             <p className="text-background/60 font-serif italic">
               And here's the part nobody tells you:
             </p>
-            <p className="text-xl md:text-2xl font-bold text-background">
-              The more your business grows…
-              <br />
-              <span className="text-primary">the worse this gets.</span>
-            </p>
-            <p className="text-background/50 text-sm font-semibold uppercase tracking-wide mt-6">
-              Growth doesn't fix this. It exposes it.
-            </p>
+            <div className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl px-8 py-8 max-w-lg mx-auto">
+              <p className="text-xl md:text-2xl font-bold text-background">
+                The more your business grows…
+                <br />
+                <span className="text-primary">the worse this gets.</span>
+              </p>
+              <p className="text-background/50 text-sm font-semibold uppercase tracking-wide mt-4">
+                Growth doesn't fix this. It exposes it.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

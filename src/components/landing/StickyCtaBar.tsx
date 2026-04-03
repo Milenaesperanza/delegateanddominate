@@ -22,7 +22,7 @@ const StickyCtaBar = () => {
           transition={{ duration: 0.3 }}
         >
           <Button variant="cta" size="lg" className="w-full py-5">
-            👉 Save My Spot — $47
+            👉 Just $47
           </Button>
         </motion.div>
       )}
