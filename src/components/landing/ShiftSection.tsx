@@ -37,7 +37,7 @@ const ShiftSection = () => {
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <div className="text-4xl mb-4">{part.icon}</div>
-              <span className="text-4xl font-black text-primary/30 group-hover:text-primary/60 transition-colors">{part.num}</span>
+              <span className="text-4xl font-black text-primary group-hover:text-primary/80 transition-colors">{part.num}</span>
               <h3 className="mt-3 text-xl font-bold text-foreground">{part.title}</h3>
               <p className="mt-2 text-sm text-foreground/60 font-serif">{part.desc}</p>
             </motion.div>
