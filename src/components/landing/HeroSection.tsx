@@ -53,7 +53,7 @@ const HeroSection = () => {
 
               <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
                 <Button variant="cta" size="lg" className="px-12 py-7 text-xl">
-                  👉 Save My Seat
+                  💰 Just $47
                 </Button>
               </div>
               <p className="mt-3 text-sm text-white/70 font-semibold">
