@@ -47,14 +47,7 @@ const FinalCTASection = () => {
               <p className="text-foreground/60 text-sm font-serif">That's the whole point.</p>
             </div>
 
-            <div className="mt-10">
-              <Button variant="cta" size="lg" className="px-12 py-7 text-lg shadow-2xl shadow-primary/30">
-                👉 Save My Seat
-              </Button>
-              <p className="mt-3 text-sm text-foreground/50 font-medium">
-                Takes 2 seconds. Might change everything.
-              </p>
-            </div>
+            <div className="mt-10" />
           </motion.div>
 
           {/* Right: Kasim profile */}
@@ -73,17 +66,33 @@ const FinalCTASection = () => {
           </motion.div>
         </div>
 
+        {/* Centered CTA */}
         <motion.div
-          className="mt-16 bg-gradient-to-br from-[#0D0D0D] to-secondary rounded-2xl px-8 py-10 shadow-2xl shadow-black/40 border border-white/10"
+          className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <p className="text-white/80 font-serif italic text-lg leading-relaxed text-center">
+          <Button variant="cta" size="lg" className="px-14 py-7 text-xl shadow-2xl shadow-primary/30">
+            👉 Save My Seat
+          </Button>
+          <p className="mt-3 text-sm text-foreground/50 font-medium">
+            Takes 2 seconds. Might change everything.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="mt-12 text-center max-w-xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <p className="text-foreground/60 font-serif italic text-lg leading-relaxed">
             The question isn't whether you can delegate.
           </p>
-          <p className="text-white font-black text-xl md:text-2xl mt-2 text-center">
+          <p className="text-foreground font-black text-xl md:text-2xl mt-2">
             It's whether you're willing to learn how.
           </p>
         </motion.div>

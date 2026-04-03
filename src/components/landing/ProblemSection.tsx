@@ -44,7 +44,7 @@ const ProblemSection = () => {
             <p className="text-white/60 font-serif italic">
               And here's the part nobody tells you:
             </p>
-            <div className="bg-white/5 backdrop-blur-sm border border-primary/30 rounded-2xl px-8 py-8 max-w-lg mx-auto shadow-2xl shadow-primary/10">
+            <div className="bg-white/15 backdrop-blur-md border border-primary/40 rounded-2xl px-8 py-8 max-w-lg mx-auto shadow-2xl shadow-primary/20">
               <p className="text-xl md:text-2xl font-bold text-white">
                 The more your business grows…
                 <br />

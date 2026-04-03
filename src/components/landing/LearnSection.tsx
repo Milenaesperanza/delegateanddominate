@@ -39,7 +39,7 @@ const LearnSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${kasimTalking})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/92 via-[#1a1a1a]/88 to-[#1a1a1a]/92" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/80 via-[#1a1a1a]/75 to-[#1a1a1a]/80" />
 
       <div className="relative z-10 container mx-auto px-6 max-w-5xl">
         <motion.div
@@ -49,7 +49,7 @@ const LearnSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight drop-shadow-lg">
             This isn't theory.
             <br />
             <span className="text-primary">It's the system I used to build and exit.</span>

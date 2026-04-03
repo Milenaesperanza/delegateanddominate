@@ -45,23 +45,17 @@ const ShiftSection = () => {
         </div>
 
         <motion.div
-          className="mt-16 text-center"
+          className="mt-16 text-center max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-foreground/60 font-serif mb-4">Most people skip all three. So they stay stuck. And blame their team.</p>
-          <div className="bg-gradient-to-br from-[#0D0D0D] to-secondary rounded-2xl px-8 py-10 max-w-xl mx-auto shadow-2xl border border-white/10">
-            <p className="text-xl md:text-2xl font-bold text-white leading-snug">
-              If your business needs you to run…
-              <br />
-              you don't have a business.
-            </p>
-            <p className="text-primary font-black text-2xl md:text-3xl mt-3">
-              You have a job.
-            </p>
-          </div>
+          <p className="text-foreground/60 font-serif mb-6">Most people skip all three. So they stay stuck. And blame their team.</p>
+          <p className="text-2xl md:text-3xl font-black text-foreground leading-snug">
+            If your business needs you to run… you don't have a business.{" "}
+            <span className="text-primary">You have a job.</span>
+          </p>
         </motion.div>
       </div>
     </section>
