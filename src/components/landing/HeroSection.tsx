@@ -57,7 +57,7 @@ const HeroSection = () => {
                 </Button>
               </div>
               <p className="mt-3 text-sm text-white/70 font-semibold">
-                Just $47 · No fluff · Real system · Only 100 seats
+                No fluff · No replays · Real system
               </p>
             </motion.div>
           </div>

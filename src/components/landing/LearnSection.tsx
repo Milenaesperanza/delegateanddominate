@@ -49,7 +49,7 @@ const LearnSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight drop-shadow-lg">
             This isn't theory.
             <br />
             <span className="text-primary">It's the system I used to build and exit.</span>
