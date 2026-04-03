@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
-import kasimProfile from "@/assets/kasim-profile.png";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,7 +14,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-secondary">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary to-foreground">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.p
           className="text-center text-lg md:text-xl font-serif text-secondary-foreground/80 italic mb-10"
@@ -38,15 +37,6 @@ const VideoSection = () => {
               onClick={handlePlay}
               className="absolute inset-0 z-10 flex items-center justify-center group cursor-pointer"
             >
-              {/* Thumbnail */}
-              <div className="absolute inset-0 bg-foreground/90 flex items-center justify-center">
-                <img
-                  src={kasimProfile}
-                  alt="Video thumbnail"
-                  className="absolute h-full object-cover opacity-30"
-                />
-              </div>
-              {/* Play button */}
               <div className="relative z-10 w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                 <Play className="w-8 h-8 text-primary-foreground ml-1" />
               </div>
@@ -56,7 +46,7 @@ const VideoSection = () => {
             ref={videoRef}
             className="w-full h-full object-cover"
             controls={isPlaying}
-            preload="none"
+            preload="metadata"
           >
             <source src="/videos/delegation-video.mp4" type="video/mp4" />
           </video>

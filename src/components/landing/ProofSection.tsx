@@ -14,7 +14,7 @@ const achievements = [
 
 const ProofSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-foreground">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-foreground to-secondary">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ const ProofSection = () => {
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="bg-background/5 border border-background/10 rounded-xl p-8"
+              className="bg-background/10 backdrop-blur-sm border border-background/10 rounded-2xl p-8 hover:bg-background/15 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -54,14 +54,16 @@ const ProofSection = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-background/60 text-sm font-semibold uppercase tracking-wide mb-6">I've:</p>
-          <ul className="space-y-3 max-w-md mx-auto">
-            {achievements.map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-background/80">
-                <span className="text-primary">→</span>
-                <span className="font-medium">{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl px-8 py-6 max-w-md mx-auto">
+            <ul className="space-y-3">
+              {achievements.map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-background/80">
+                  <span className="text-primary font-bold">→</span>
+                  <span className="font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
     </section>
