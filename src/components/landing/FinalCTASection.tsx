@@ -47,14 +47,7 @@ const FinalCTASection = () => {
               <p className="text-foreground/60 text-sm font-serif">That's the whole point.</p>
             </div>
 
-            <div className="mt-10">
-              <Button variant="cta" size="lg" className="px-12 py-7 text-lg shadow-2xl shadow-primary/30">
-                👉 Save My Seat
-              </Button>
-              <p className="mt-3 text-sm text-foreground/50 font-medium">
-                Takes 2 seconds. Might change everything.
-              </p>
-            </div>
+            <div className="mt-10" />
           </motion.div>
 
           {/* Right: Kasim profile */}
