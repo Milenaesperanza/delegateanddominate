@@ -52,7 +52,7 @@ const HeroSection = () => {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
-                <Button variant="cta" size="lg" className="px-10 py-6 text-lg">
+                <Button variant="cta" size="lg" className="px-12 py-7 text-xl">
                   👉 Save My Seat
                 </Button>
               </div>
