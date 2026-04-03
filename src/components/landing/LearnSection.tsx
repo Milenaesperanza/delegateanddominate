@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import kasimTalking from "@/assets/kasim-talking.jpg";
 
 const modules = [
   {
@@ -32,8 +33,15 @@ const modules = [
 
 const LearnSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-accent">
-      <div className="container mx-auto px-6 max-w-5xl">
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${kasimTalking})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/95 via-[#0D0D0D]/90 to-[#0D0D0D]/95" />
+
+      <div className="relative z-10 container mx-auto px-6 max-w-5xl">
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +49,7 @@ const LearnSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
             This isn't theory.
             <br />
             <span className="text-primary">It's the system I used to build and exit.</span>
@@ -52,24 +60,24 @@ const LearnSection = () => {
           {modules.map((mod, i) => (
             <motion.div
               key={i}
-              className="bg-card border border-border rounded-2xl p-8 hover:border-primary/30 hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 relative overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               {/* Gradient accent top */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
               
               <div className="text-3xl mb-3">{mod.icon}</div>
-              <span className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">
+              <span className="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 border border-primary/30">
                 Module {i + 1}
               </span>
-              <h3 className="text-lg font-bold text-foreground mb-4">{mod.title}</h3>
+              <h3 className="text-lg font-bold text-white mb-4">{mod.title}</h3>
               <ul className="space-y-3">
                 {mod.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-primary mt-0.5 font-bold">✓</span>
+                  <li key={j} className="flex items-start gap-2 text-sm text-white/80">
+                    <span className="text-green-400 mt-0.5 font-bold">✓</span>
                     <span className="font-serif">{item}</span>
                   </li>
                 ))}

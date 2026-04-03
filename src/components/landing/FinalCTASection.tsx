@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const FinalCTASection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-accent">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-[#E8E8E8]">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,45 +24,46 @@ const FinalCTASection = () => {
             ].map((text, i) => (
               <motion.div
                 key={i}
-                className="bg-card border border-border rounded-xl px-6 py-4 text-lg text-muted-foreground font-serif"
+                className="bg-white border-2 border-foreground/10 rounded-xl px-6 py-4 text-lg text-foreground font-serif shadow-lg"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
               >
+                <span className="text-green-500 font-bold mr-2">✓</span>
                 {text}
               </motion.div>
             ))}
 
-            <p className="text-foreground font-semibold mt-6">
+            <p className="text-foreground font-bold mt-6 text-lg">
               And something else happens too:
             </p>
-            <p className="text-foreground text-xl font-bold">
+            <p className="text-foreground text-2xl font-black">
               You get your life back.
             </p>
-            <p className="text-muted-foreground text-sm font-serif">That's the whole point.</p>
+            <p className="text-foreground/60 text-sm font-serif">That's the whole point.</p>
           </div>
 
           <div className="mt-10">
-            <Button variant="cta" size="lg" className="px-12 py-7 text-lg">
+            <Button variant="cta" size="lg" className="px-12 py-7 text-lg shadow-2xl shadow-primary/30">
               👉 Just $47
             </Button>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-3 text-sm text-foreground/50 font-medium">
               Takes 2 seconds. Might change everything.
             </p>
           </div>
 
           <motion.div
-            className="mt-16 bg-gradient-to-br from-foreground to-secondary rounded-2xl px-8 py-10 shadow-xl"
+            className="mt-16 bg-gradient-to-br from-[#0D0D0D] to-secondary rounded-2xl px-8 py-10 shadow-2xl border border-white/10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <p className="text-background/70 font-serif italic text-lg leading-relaxed">
+            <p className="text-white/70 font-serif italic text-lg leading-relaxed">
               The question isn't whether you can delegate.
             </p>
-            <p className="text-background font-black text-xl md:text-2xl mt-2">
+            <p className="text-white font-black text-xl md:text-2xl mt-2">
               It's whether you're willing to learn how.
             </p>
           </motion.div>

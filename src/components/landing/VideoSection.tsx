@@ -14,10 +14,10 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary to-foreground">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary to-[#0D0D0D]">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.p
-          className="text-center text-lg md:text-xl font-serif text-secondary-foreground/80 italic mb-10"
+          className="text-center text-lg md:text-xl font-serif text-white/80 italic mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -26,7 +26,7 @@ const VideoSection = () => {
         </motion.p>
 
         <motion.div
-          className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-foreground"
+          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 aspect-video bg-black border border-white/10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,8 +37,8 @@ const VideoSection = () => {
               onClick={handlePlay}
               className="absolute inset-0 z-10 flex items-center justify-center group cursor-pointer"
             >
-              <div className="relative z-10 w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                <Play className="w-8 h-8 text-primary-foreground ml-1" />
+              <div className="relative z-10 w-20 h-20 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/40">
+                <Play className="w-8 h-8 text-white ml-1" />
               </div>
             </button>
           )}
