@@ -30,7 +30,7 @@ const FinalCTASection = () => {
 
           {/* Free */}
           <motion.div
-            className="bg-gray-900 border border-gray-700 rounded-2xl p-8 flex flex-col"
+            className="border border-gray-700 rounded-2xl p-8 flex flex-col"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

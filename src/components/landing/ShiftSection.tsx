@@ -8,7 +8,7 @@ const ShiftSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-gray-900">
+    <section className="py-24 md:py-32">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div
           className="text-center mb-14"

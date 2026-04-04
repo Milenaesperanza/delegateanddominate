@@ -14,7 +14,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-gray-200">
+    <section className="py-24 md:py-32">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div
           className="text-center mb-12"
@@ -34,7 +34,7 @@ const VideoSection = () => {
         </motion.div>
 
         <motion.div
-          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/20 aspect-video bg-black border border-gray-300"
+          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/20 aspect-video border border-gray-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

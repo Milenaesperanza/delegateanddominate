@@ -70,7 +70,7 @@ const HeroSection = () => {
 
                 {/* VIP */}
                 <div className="flex-1 bg-primary rounded-2xl px-6 py-6 shadow-xl shadow-primary/30 relative">
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full tracking-widest uppercase">Most Popular</span>
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-xs font-bold px-3 py-1 rounded-full tracking-widest uppercase">Most Popular</span>
                   <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1">VIP</p>
                   <p className="text-2xl font-black text-white">$47</p>
                   <ul className="mt-3 space-y-2 text-sm text-white/90">

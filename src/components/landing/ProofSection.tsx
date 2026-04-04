@@ -37,7 +37,7 @@ const ProofSection = () => {
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-primary/40 transition-all duration-300"
+              className="border border-gray-800 rounded-2xl p-8 hover:border-primary/40 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -57,7 +57,7 @@ const ProofSection = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-6">I've:</p>
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl px-8 py-8 max-w-md mx-auto">
+          <div className="border border-gray-800 rounded-2xl px-8 py-8 max-w-md mx-auto">
             <ul className="space-y-4">
               {achievements.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-white text-left">

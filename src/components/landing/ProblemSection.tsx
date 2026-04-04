@@ -8,7 +8,7 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-gray-50">
+    <section className="py-24 md:py-32">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
