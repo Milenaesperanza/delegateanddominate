@@ -4,141 +4,83 @@ import kasimProfile from "@/assets/kasim-profile-2.png";
 
 const FinalCTASection = () => {
   return (
-    <section className="py-24 md:py-32 bg-black border-t border-gray-800">
-      <div className="container mx-auto px-6 max-w-5xl">
-
-        {/* Headline */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-500 border border-gray-700 px-4 py-1.5 rounded-full mb-6">
-            Choose your seat
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
-            This is what changes
-            <br />
-            <span className="text-primary">when you get this right.</span>
-          </h2>
-        </motion.div>
-
-        {/* Tickets */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-
-          {/* Free */}
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-[#E8E8E8]">
+      <div className="container mx-auto px-6 max-w-4xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
           <motion.div
-            className="border border-gray-700 rounded-2xl p-8 flex flex-col"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Free Access</span>
-            <p className="text-4xl font-black text-white mb-6">$0</p>
-            <ul className="space-y-3 text-gray-400 text-sm flex-1">
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-black mt-0.5">✓</span>
-                Intro video — the delegation framework explained
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary font-black mt-0.5">✓</span>
-                Delegation checklist — audit your business today
-              </li>
-            </ul>
-            <a href="#" className="mt-8 block">
-              <Button variant="outline" className="w-full font-bold border-gray-600 text-white hover:bg-gray-800">
-                Get Free Access
-              </Button>
-            </a>
-          </motion.div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+              This is what changes<br />
+              <span className="text-primary">when you get this right.</span>
+            </h2>
 
-          {/* VIP */}
-          <motion.div
-            className="bg-primary rounded-2xl p-8 flex flex-col relative shadow-2xl shadow-primary/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-          >
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-primary text-xs font-black px-4 py-1 rounded-full tracking-widest uppercase shadow-md">
-              Most Popular
-            </span>
-            <span className="text-xs font-bold uppercase tracking-widest text-white/70 mb-4">VIP Seat</span>
-            <p className="text-4xl font-black text-white mb-6">$47</p>
-            <ul className="space-y-3 text-white/90 text-sm flex-1">
-              <li className="flex items-start gap-2">
-                <span className="text-white font-black mt-0.5">✓</span>
-                Everything in Free
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-white font-black mt-0.5">✓</span>
-                Live webinar access — April 26
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-white font-black mt-0.5">✓</span>
-                Private community — network with other founders
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-white font-black mt-0.5">✓</span>
-                Q&A with Kasim live
-              </li>
-            </ul>
-            <a href="#" className="mt-8 block">
-              <Button className="w-full bg-white text-primary font-black hover:bg-white/90 shadow-lg">
-                Save My VIP Seat →
-              </Button>
-            </a>
-          </motion.div>
-
-        </div>
-
-        {/* Kasim + outcomes */}
-        <motion.div
-          className="mt-20 grid md:grid-cols-2 gap-12 items-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <img
-            src={kasimProfile}
-            alt="Kasim Aslam"
-            className="w-full max-w-xs rounded-2xl shadow-2xl shadow-black/50 mx-auto"
-          />
-          <div>
-            <p className="text-xl font-black text-white mb-6">
-              When you get this right:
-            </p>
-            <ul className="space-y-4">
+            <div className="mt-8 space-y-4">
               {[
                 "You stop being the bottleneck.",
                 "Your team starts thinking for you.",
-                "Your business grows without taking more of your time.",
-                "You get your life back.",
+                "Your business grows… without taking more of your time.",
               ].map((text, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-300">
-                  <span className="text-primary font-black mt-0.5 shrink-0">✓</span>
-                  <span className="font-semibold">{text}</span>
-                </li>
+                <motion.div
+                  key={i}
+                  className="bg-white border-2 border-foreground/10 rounded-xl px-6 py-4 text-lg text-foreground font-serif shadow-xl shadow-black/10"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.4 }}
+                >
+                  <span className="text-green-500 font-bold mr-2">✓</span>
+                  {text}
+                </motion.div>
               ))}
-            </ul>
-            <p className="mt-6 text-gray-500 text-sm">That's the whole point.</p>
-          </div>
-        </motion.div>
 
-        {/* Final trust line */}
-        <motion.p
-          className="text-center mt-16 text-gray-600 text-sm font-medium"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+              <p className="text-foreground font-bold mt-6 text-lg">
+                And something else happens too:
+              </p>
+              <p className="text-foreground text-2xl font-black">
+                You get your life back.
+              </p>
+              <p className="text-foreground/60 text-sm font-serif">That's the whole point.</p>
+            </div>
+
+            <div className="mt-10" />
+          </motion.div>
+
+          {/* Right: Kasim profile */}
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <img
+              src={kasimProfile}
+              alt="Kasim Aslam"
+              className="w-full max-w-sm rounded-2xl shadow-2xl shadow-black/20"
+            />
+          </motion.div>
+        </div>
+
+        {/* Centered CTA */}
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
-          No fluff · No replays · Real system · April 26
-        </motion.p>
+          <Button variant="cta" size="lg" className="px-14 py-7 text-xl shadow-2xl shadow-primary/30">
+            👉 Save My Seat
+          </Button>
+          <p className="mt-3 text-sm text-foreground/50 font-medium">
+            Takes 2 seconds. Might change everything.
+          </p>
+        </motion.div>
 
       </div>
     </section>

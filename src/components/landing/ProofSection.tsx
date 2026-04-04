@@ -14,7 +14,7 @@ const achievements = [
 
 const ProofSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-black">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-[#0D0D0D] to-secondary">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,10 +22,7 @@ const ProofSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-500 border border-gray-700 px-4 py-1.5 rounded-full mb-6">
-            Why trust Kasim
-          </span>
-          <p className="text-gray-400 italic text-lg">
+          <p className="text-white/70 font-serif italic text-lg">
             I didn't learn this from a book.
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white mt-2">
@@ -37,14 +34,14 @@ const ProofSection = () => {
           {stats.map((stat, i) => (
             <motion.div
               key={i}
-              className="border border-gray-800 rounded-2xl p-8 hover:border-primary/40 transition-all duration-300"
+              className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-2xl shadow-black/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <p className="text-5xl font-black text-primary">{stat.value}</p>
-              <p className="mt-2 text-gray-400 text-sm font-semibold">{stat.label}</p>
+              <p className="text-4xl md:text-5xl font-black text-primary">{stat.value}</p>
+              <p className="mt-2 text-white/90 text-sm font-semibold">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -56,13 +53,13 @@ const ProofSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-6">I've:</p>
-          <div className="border border-gray-800 rounded-2xl px-8 py-8 max-w-md mx-auto">
-            <ul className="space-y-4">
+          <p className="text-white/80 text-sm font-semibold uppercase tracking-wide mb-6">I've:</p>
+          <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-6 max-w-md mx-auto shadow-2xl shadow-black/50">
+            <ul className="space-y-3">
               {achievements.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-white text-left">
-                  <span className="text-primary font-black shrink-0 mt-0.5">✓</span>
-                  <span className="font-semibold">{item}</span>
+                <li key={i} className="flex items-start gap-3 text-white">
+                  <span className="text-green-400 font-bold shrink-0 mt-0.5">✓</span>
+                  <span className="font-semibold text-left">{item}</span>
                 </li>
               ))}
             </ul>
