@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-right bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       {/* Overlay izquierda para que el texto se lea */}
