@@ -7,23 +7,25 @@ import kasimCutout from "@/assets/hero-bg-kasim.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
+
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-right bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 z-0"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'right center', backgroundRepeat: 'no-repeat' }}
       />
-      {/* Overlay izquierda para que el texto se lea */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
 
-      {/* Kasim recortado — derecha, full height */}
+      {/* Kasim recortado encima del fondo */}
       <img
         src={kasimCutout}
-        alt="Kasim Aslam"
-        className="absolute bottom-0 right-0 h-full object-contain object-bottom z-10 pointer-events-none"
+        alt=""
+        className="absolute inset-0 z-10 w-full h-full object-cover pointer-events-none"
       />
 
-      {/* Header / Logo */}
-      <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
+      {/* Overlay izquierda */}
+      <div className="absolute inset-0 z-20 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
+
+      {/* Header */}
+      <header className="relative z-30 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto flex items-center justify-between py-3 px-6">
           <img src={kasimLogo} alt="Kasim Aslam" className="h-8 md:h-11" />
           <a href="#tickets">
@@ -35,7 +37,7 @@ const HeroSection = () => {
       </header>
 
       {/* Hero content */}
-      <div className="relative z-20 flex-1 flex items-center">
+      <div className="relative z-30 flex-1 flex items-center">
         <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-xl">
             <motion.div
@@ -104,7 +106,7 @@ const HeroSection = () => {
 
       {/* Trust line */}
       <motion.div
-        className="relative z-20 pb-8 text-center text-sm text-gray-500 font-semibold"
+        className="relative z-30 pb-8 text-center text-sm text-gray-500 font-semibold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
