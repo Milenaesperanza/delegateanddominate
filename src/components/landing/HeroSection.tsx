@@ -12,7 +12,7 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       {/* Light overlay — deja respirar la imagen */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/60 to-white/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
 
       {/* Header / Logo */}
       <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
