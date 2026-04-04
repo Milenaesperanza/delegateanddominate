@@ -2,22 +2,33 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import kasimLogo from "@/assets/kasim-logo.png";
 import heroBg from "@/assets/hero-bg.png";
+import kasimOverlay from "@/assets/hero-bg-kasim.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Background image */}
+
+      {/* Capa 1: fondo base */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Overlay mobile: más oscuro para que el texto sea legible */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white/70 md:bg-gradient-to-r md:from-white/95 md:via-white/60 md:to-transparent" />
+
+      {/* Capa 2: overlay blanco para que el texto sea legible */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+
+      {/* Capa 3: Kasim PNG transparente encima del fondo, alineado derecha */}
+      <img
+        src={kasimOverlay}
+        alt=""
+        aria-hidden="true"
+        className="absolute right-0 top-0 h-full w-auto object-cover object-right pointer-events-none select-none"
+      />
 
       {/* Header / Logo */}
       <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
-          <img src={kasimLogo} alt="Kasim Aslam" className="h-8 md:h-11" />
+          <img src={kasimLogo} alt="Kasim Aslam" className="h-10 md:h-14 w-auto" />
           <a href="#tickets">
             <Button variant="cta" size="sm" className="px-4 py-2 text-sm font-bold tracking-wide">
               Save My Seat
@@ -39,10 +50,11 @@ const HeroSection = () => {
                 🔴 Live Webinar · April 26 · Only 100 Seats
               </span>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight" style={{ color: '#111111' }}>
                 You don't have a time problem.
-                <br />
-                <span className="text-primary">You have a delegation problem.</span>
+              </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary mt-1">
+                You have a delegation problem.
               </h1>
 
               <p className="mt-5 md:mt-6 text-base md:text-lg text-gray-700 max-w-md leading-relaxed">
