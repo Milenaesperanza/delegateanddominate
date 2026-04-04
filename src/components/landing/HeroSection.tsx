@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import kasimLogo from "@/assets/kasim-logo.png";
 import heroBg from "@/assets/hero-bg.png";
+import kasimCutout from "@/assets/hero-bg-kasim.png";
 
 const HeroSection = () => {
   return (
@@ -11,8 +12,15 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Light overlay — deja respirar la imagen */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
+      {/* Overlay izquierda para que el texto se lea */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
+
+      {/* Kasim recortado — derecha, full height */}
+      <img
+        src={kasimCutout}
+        alt="Kasim Aslam"
+        className="absolute bottom-0 right-0 h-full object-contain object-bottom z-10 pointer-events-none"
+      />
 
       {/* Header / Logo */}
       <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
@@ -27,7 +35,7 @@ const HeroSection = () => {
       </header>
 
       {/* Hero content */}
-      <div className="relative z-10 flex-1 flex items-center">
+      <div className="relative z-20 flex-1 flex items-center">
         <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-xl">
             <motion.div
@@ -96,7 +104,7 @@ const HeroSection = () => {
 
       {/* Trust line */}
       <motion.div
-        className="relative z-10 pb-8 text-center text-sm text-gray-500 font-semibold"
+        className="relative z-20 pb-8 text-center text-sm text-gray-500 font-semibold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
