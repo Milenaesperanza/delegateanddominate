@@ -14,19 +14,27 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary to-[#0D0D0D]">
+    <section className="py-24 md:py-32 bg-gray-200">
       <div className="container mx-auto px-6 max-w-4xl">
-        <motion.p
-          className="text-center text-lg md:text-xl font-serif text-white/80 italic mb-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          This is the exact way I think about delegation.
-        </motion.p>
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-500 border border-gray-400 px-4 py-1.5 rounded-full mb-6">
+            Watch this first
+          </span>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+            This is exactly how I think
+            <br />
+            <span className="text-primary">about delegation.</span>
+          </h2>
+        </motion.div>
 
         <motion.div
-          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 aspect-video bg-black border border-white/10"
+          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/20 aspect-video bg-black border border-gray-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,6 +59,16 @@ const VideoSection = () => {
             <source src="/videos/delegation-video.mp4" type="video/mp4" />
           </video>
         </motion.div>
+
+        <motion.p
+          className="text-center mt-8 text-gray-500 text-sm font-medium"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          3 minutes that might change how you run your business.
+        </motion.p>
       </div>
     </section>
   );
