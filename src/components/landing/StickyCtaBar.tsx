@@ -15,15 +15,17 @@ const StickyCtaBar = () => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed bottom-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-t border-border/20 py-3 px-6 md:hidden"
+          className="fixed bottom-0 left-0 right-0 z-50 bg-gray-950 backdrop-blur-md border-t border-gray-800 py-3 px-4 md:hidden"
           initial={{ y: 80 }}
           animate={{ y: 0 }}
           exit={{ y: 80 }}
           transition={{ duration: 0.3 }}
         >
-          <Button variant="cta" size="lg" className="w-full py-5">
-            👉 Save My Seat
-          </Button>
+          <a href="#tickets">
+            <Button variant="cta" size="lg" className="w-full py-5">
+              👉 Save My Seat — $47
+            </Button>
+          </a>
         </motion.div>
       )}
     </AnimatePresence>

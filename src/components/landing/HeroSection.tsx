@@ -11,15 +11,15 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Light overlay — deja respirar la imagen */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
+      {/* Overlay mobile: más oscuro para que el texto sea legible */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white/70 md:bg-gradient-to-r md:from-white/95 md:via-white/60 md:to-transparent" />
 
       {/* Header / Logo */}
       <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
-        <div className="container mx-auto flex items-center justify-between py-3 px-6">
+        <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
           <img src={kasimLogo} alt="Kasim Aslam" className="h-8 md:h-11" />
           <a href="#tickets">
-            <Button variant="cta" size="sm" className="px-6 py-2 text-sm font-bold tracking-wide">
+            <Button variant="cta" size="sm" className="px-4 py-2 text-sm font-bold tracking-wide">
               Save My Seat
             </Button>
           </a>
@@ -28,38 +28,37 @@ const HeroSection = () => {
 
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="container mx-auto px-6 py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
           <div className="max-w-xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <span className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full shadow-md mb-8">
+              <span className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full shadow-md mb-6 md:mb-8">
                 🔴 Live Webinar · April 26 · Only 100 Seats
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-gray-900">
-                You don't have a<br />time problem.
-              </h1>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-primary mt-1">
-                You have a<br />delegation problem.
+                You don't have a time problem.
+                <br />
+                <span className="text-primary">You have a delegation problem.</span>
               </h1>
 
-              <p className="mt-6 text-base md:text-lg text-gray-700 max-w-md leading-relaxed">
+              <p className="mt-5 md:mt-6 text-base md:text-lg text-gray-700 max-w-md leading-relaxed">
                 Most entrepreneurs are stuck doing work they should never touch.
                 In this training, Kasim shows you the exact system he used to build and exit multiple 7-figure businesses.
               </p>
 
               {/* Tickets */}
-              <div id="tickets" className="mt-10 flex flex-col sm:flex-row gap-4">
+              <div id="tickets" className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Free */}
-                <div className="flex-1 bg-white/90 border border-gray-200 rounded-2xl px-6 py-6 shadow-md">
+                <div className="bg-white/95 border border-gray-200 rounded-2xl px-5 py-5 shadow-md">
                   <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Free</p>
                   <p className="text-2xl font-black text-gray-900">$0</p>
                   <ul className="mt-3 space-y-2 text-sm text-gray-600">
-                    <li>✓ Intro video</li>
-                    <li>✓ Delegation checklist</li>
+                    <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Intro video</li>
+                    <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Delegation checklist</li>
                   </ul>
                   <a href="#" className="mt-4 block">
                     <Button variant="outline" className="w-full font-bold">
@@ -69,14 +68,14 @@ const HeroSection = () => {
                 </div>
 
                 {/* VIP */}
-                <div className="flex-1 bg-primary rounded-2xl px-6 py-6 shadow-xl shadow-primary/30 relative">
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full tracking-widest uppercase">Most Popular</span>
+                <div className="bg-primary rounded-2xl px-5 py-5 shadow-xl shadow-primary/30 relative">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full tracking-widest uppercase whitespace-nowrap">Most Popular</span>
                   <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1">VIP</p>
                   <p className="text-2xl font-black text-white">$47</p>
                   <ul className="mt-3 space-y-2 text-sm text-white/90">
-                    <li>✓ Everything in Free</li>
-                    <li>✓ Live webinar access</li>
-                    <li>✓ Private community</li>
+                    <li className="flex items-center gap-2"><span className="text-white font-bold">✓</span> Everything in Free</li>
+                    <li className="flex items-center gap-2"><span className="text-white font-bold">✓</span> Live webinar access</li>
+                    <li className="flex items-center gap-2"><span className="text-white font-bold">✓</span> Private community</li>
                   </ul>
                   <a href="#" className="mt-4 block">
                     <Button className="w-full bg-white text-primary font-black hover:bg-white/90">
@@ -96,7 +95,7 @@ const HeroSection = () => {
 
       {/* Trust line */}
       <motion.div
-        className="relative z-10 pb-8 text-center text-sm text-gray-500 font-semibold"
+        className="relative z-10 pb-6 text-center text-sm text-gray-600 font-semibold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}

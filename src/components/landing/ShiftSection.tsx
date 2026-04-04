@@ -8,10 +8,10 @@ const ShiftSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-gray-900">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <section className="py-20 md:py-32 bg-gray-900">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <motion.div
-          className="text-center mb-14"
+          className="text-center mb-10 md:mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -20,45 +20,45 @@ const ShiftSection = () => {
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-400 border border-gray-700 px-4 py-1.5 rounded-full mb-6">
             The system
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
             Delegation isn't about
             <br />
             <span className="text-primary">dumping tasks.</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
+          <p className="mt-4 text-base md:text-lg text-gray-400">
             That's why it's not working for you.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
           {parts.map((part, i) => (
             <motion.div
               key={i}
-              className="bg-gray-800 border border-gray-700 rounded-2xl p-8 text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group"
+              className="bg-gray-800 border border-gray-700 rounded-2xl p-6 md:p-8 text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="text-4xl mb-4">{part.icon}</div>
-              <span className="text-5xl font-black text-primary">{part.num}</span>
-              <h3 className="mt-3 text-xl font-bold text-white">{part.title}</h3>
+              <div className="text-3xl md:text-4xl mb-3 md:mb-4">{part.icon}</div>
+              <span className="text-4xl md:text-5xl font-black text-primary">{part.num}</span>
+              <h3 className="mt-3 text-lg md:text-xl font-bold text-white">{part.title}</h3>
               <p className="mt-2 text-sm text-gray-400">{part.desc}</p>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          className="mt-16 text-center max-w-2xl mx-auto"
+          className="mt-12 md:mt-16 text-center max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-500 mb-6 text-sm md:text-base">
             Most people skip all three. So they stay stuck. And blame their team.
           </p>
-          <p className="text-2xl md:text-3xl font-black text-white leading-snug">
+          <p className="text-xl md:text-3xl font-black text-white leading-snug">
             If your business needs you to run…{" "}
             <span className="text-primary">you don't have a business. You have a job.</span>
           </p>
