@@ -22,7 +22,7 @@ const HeroSection = () => {
       />
 
       {/* Header / Logo */}
-      <header className="relative z-20 bg-white/40 backdrop-blur-md shadow-sm">
+      <header className="relative z-20 bg-transparent">
         <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
           <img src={kasimLogo} alt="Kasim Aslam" className="h-5 md:h-9 w-auto" />
           <a href="#tickets">
