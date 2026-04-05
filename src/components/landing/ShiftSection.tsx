@@ -8,7 +8,12 @@ const ShiftSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gray-900">
+    <section
+      className="relative py-20 md:py-32"
+      style={{
+        background: "linear-gradient(180deg, #555555 0%, #888888 50%, #bbbbbb 100%)"
+      }}
+    >
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <motion.div
           className="text-center mb-10 md:mb-14"
@@ -17,15 +22,17 @@ const ShiftSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-400 border border-gray-700 px-4 py-1.5 rounded-full mb-6">
-            The system
-          </span>
+          <div className="mb-6">
+            <span className="inline-block text-sm md:text-base font-black uppercase tracking-widest text-white bg-primary px-6 py-2.5 rounded-full shadow-lg shadow-primary/30">
+              The system
+            </span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
             Delegation isn't about
             <br />
             <span className="text-primary">dumping tasks.</span>
           </h2>
-          <p className="mt-4 text-base md:text-lg text-gray-400">
+          <p className="mt-4 text-base md:text-lg text-white/70">
             That's why it's not working for you.
           </p>
         </motion.div>
@@ -34,7 +41,11 @@ const ShiftSection = () => {
           {parts.map((part, i) => (
             <motion.div
               key={i}
-              className="bg-gray-800 border border-gray-700 rounded-2xl p-6 md:p-8 text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group"
+              className="rounded-2xl p-6 md:p-8 text-center"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.15)",
+                border: "1px solid rgba(255,255,255,0.30)",
+              }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -43,7 +54,7 @@ const ShiftSection = () => {
               <div className="text-3xl md:text-4xl mb-3 md:mb-4">{part.icon}</div>
               <span className="text-4xl md:text-5xl font-black text-primary">{part.num}</span>
               <h3 className="mt-3 text-lg md:text-xl font-bold text-white">{part.title}</h3>
-              <p className="mt-2 text-sm text-gray-400">{part.desc}</p>
+              <p className="mt-2 text-sm text-white/70">{part.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -55,7 +66,7 @@ const ShiftSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-500 mb-6 text-sm md:text-base">
+          <p className="text-white/60 mb-6 text-sm md:text-base">
             Most people skip all three. So they stay stuck. And blame their team.
           </p>
           <p className="text-xl md:text-3xl font-black text-white leading-snug">
