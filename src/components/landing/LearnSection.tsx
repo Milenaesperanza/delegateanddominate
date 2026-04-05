@@ -64,8 +64,8 @@ const LearnSection = () => {
               key={i}
               className="rounded-2xl p-6 md:p-8 relative overflow-hidden"
               style={{
-                backgroundColor: "#2e2e2e",
-                border: "1px solid #666666",
+                backgroundColor: "rgba(255,255,255,0.12)",
+                border: "1px solid rgba(255,255,255,0.25)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.10)"
               }}
               initial={{ opacity: 0, y: 20 }}
