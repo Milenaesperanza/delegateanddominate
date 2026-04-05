@@ -64,8 +64,8 @@ const LearnSection = () => {
               key={i}
               className="rounded-2xl p-6 md:p-8 relative overflow-hidden"
               style={{
-                backgroundColor: "#444444",
-                border: "1px solid #555555",
+                backgroundColor: "#2e2e2e",
+                border: "1px solid #666666",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.10)"
               }}
               initial={{ opacity: 0, y: 20 }}
@@ -78,10 +78,10 @@ const LearnSection = () => {
               <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-3 md:mb-4">
                 Module {i + 1}
               </span>
-              <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4" style={{ color: "#111111" }}>{mod.title}</h3>
+              <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4" style={{ color: "#ffffff" }}>{mod.title}</h3>
               <ul className="space-y-3">
                 {mod.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm" style={{ color: "#444444" }}>
+                  <li key={j} className="flex items-start gap-2 text-sm" style={{ color: "#dddddd" }}>
                     <span className="text-primary mt-0.5 font-bold shrink-0">✓</span>
                     <span>{item}</span>
                   </li>
