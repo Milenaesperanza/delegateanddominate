@@ -88,7 +88,7 @@ const ProblemSection = () => {
               style={{ backgroundColor: "#1c1c1c" }}
             >
               <p className="text-gray-600 text-sm font-bold uppercase tracking-widest text-center px-6">
-                Imagen pendiente
+                Image Under Construction
               </p>
             </div>
           </motion.div>
