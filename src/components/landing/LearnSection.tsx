@@ -32,7 +32,12 @@ const modules = [
 
 const LearnSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-gray-900">
+    <section
+      className="relative py-20 md:py-32"
+      style={{
+        background: "linear-gradient(180deg, #111111 0%, #2a2a2a 40%, #e8e8e8 100%)"
+      }}
+    >
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <motion.div
           className="text-center mb-10 md:mb-14"
@@ -41,9 +46,11 @@ const LearnSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-gray-400 border border-gray-700 px-4 py-1.5 rounded-full mb-6">
-            What you'll learn
-          </span>
+          <div className="mb-6">
+            <span className="inline-block text-sm md:text-base font-black uppercase tracking-widest text-white bg-primary px-6 py-2.5 rounded-full shadow-lg shadow-primary/30">
+              What you'll learn
+            </span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
             This isn't theory.
             <br />
@@ -55,21 +62,26 @@ const LearnSection = () => {
           {modules.map((mod, i) => (
             <motion.div
               key={i}
-              className="bg-gray-800 border border-gray-700 rounded-2xl p-6 md:p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 relative overflow-hidden"
+              className="rounded-2xl p-6 md:p-8 relative overflow-hidden"
+              style={{
+                backgroundColor: "#ffffff",
+                border: "1px solid #e0e0e0",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.10)"
+              }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
               <div className="text-2xl md:text-3xl mb-3">{mod.icon}</div>
               <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-3 md:mb-4">
                 Module {i + 1}
               </span>
-              <h3 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">{mod.title}</h3>
+              <h3 className="text-base md:text-lg font-bold mb-3 md:mb-4" style={{ color: "#111111" }}>{mod.title}</h3>
               <ul className="space-y-3">
                 {mod.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
+                  <li key={j} className="flex items-start gap-2 text-sm" style={{ color: "#444444" }}>
                     <span className="text-primary mt-0.5 font-bold shrink-0">✓</span>
                     <span>{item}</span>
                   </li>
