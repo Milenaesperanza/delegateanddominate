@@ -62,7 +62,7 @@ const VideoSection = () => {
             className="relative rounded-2xl overflow-hidden aspect-video"
             style={{
               border: "2px solid white",
-              boxShadow: "0 0 30px #cc000080, 0 0 60px #8B000050, 0 0 100px #8B000030"
+              boxShadow: "0 0 30px #ffffff80, 0 0 60px #ffffff50, 0 0 100px #ffffff30"
             }}
           >
             {!isPlaying && (
