@@ -32,7 +32,7 @@ const ShiftSection = () => {
             <br />
             <span className="text-primary">dumping tasks.</span>
           </h2>
-          <p className="mt-4 text-base md:text-lg text-white/70">
+          <p className="mt-4 text-base md:text-lg font-semibold" style={{ color: "#111111" }}>
             That's why it's not working for you.
           </p>
         </motion.div>
@@ -53,8 +53,8 @@ const ShiftSection = () => {
             >
               <div className="text-3xl md:text-4xl mb-3 md:mb-4">{part.icon}</div>
               <span className="text-4xl md:text-5xl font-black text-primary">{part.num}</span>
-              <h3 className="mt-3 text-lg md:text-xl font-bold text-white">{part.title}</h3>
-              <p className="mt-2 text-sm text-white/70">{part.desc}</p>
+              <h3 className="mt-3 text-lg md:text-xl font-bold" style={{ color: "#111111" }}>{part.title}</h3>
+              <p className="mt-2 text-sm font-medium" style={{ color: "#222222" }}>{part.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -66,10 +66,10 @@ const ShiftSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-white/60 mb-6 text-sm md:text-base">
+          <p className="mb-6 text-sm md:text-base font-semibold" style={{ color: "#111111" }}>
             Most people skip all three. So they stay stuck. And blame their team.
           </p>
-          <p className="text-xl md:text-3xl font-black text-white leading-snug">
+          <p className="text-xl md:text-3xl font-black leading-snug" style={{ color: "#111111" }}>
             If your business needs you to run…{" "}
             <span className="text-primary">you don't have a business. You have a job.</span>
           </p>
