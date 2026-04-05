@@ -104,17 +104,13 @@ const HeroSection = () => {
 
       {/* Trust line */}
       <motion.div
-        className="relative z-10 pb-6 text-center text-sm text-gray-600 font-semibold"
+        className="relative z-10 pb-6 text-center text-sm text-gray-800 font-semibold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
       >
         Trusted by hundreds of founders worldwide
       </motion.div>
-      
-      {/* Fade hacia abajo */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-50 z-10" />
-      
     </section>
   );
 };
