@@ -30,7 +30,6 @@ const VideoSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Badge protagonista */}
           <div className="mb-6">
             <span className="inline-block text-sm md:text-base font-black uppercase tracking-widest text-white bg-primary px-6 py-2.5 rounded-full shadow-lg shadow-primary/30">
               Watch this first
@@ -46,17 +45,26 @@ const VideoSection = () => {
 
         {/* Video destacado */}
         <motion.div
-          className="relative"
+          className="relative px-4 md:px-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Glow detrás del video */}
-          <div className="absolute -inset-4 rounded-3xl opacity-40 blur-2xl" style={{ background: "radial-gradient(ellipse, #8B000060 0%, transparent 70%)" }} />
+          {/* Glow rojo fuerte */}
+          <div
+            className="absolute -inset-4 rounded-3xl blur-2xl"
+            style={{ background: "radial-gradient(ellipse at center, #cc0000 0%, #8B000070 40%, transparent 75%)" }}
+          />
 
-          {/* Contenedor del video */}
-          <div className="relative rounded-2xl overflow-hidden aspect-video border border-gray-700 shadow-2xl" style={{ backgroundColor: "#000" }}>
+          {/* Marco rojo brillante */}
+          <div
+            className="relative rounded-2xl overflow-hidden aspect-video"
+            style={{
+              border: "2px solid #cc0000",
+              boxShadow: "0 0 30px #cc000080, 0 0 60px #8B000050, 0 0 100px #8B000030"
+            }}
+          >
             {!isPlaying && (
               <button
                 onClick={handlePlay}
@@ -79,7 +87,7 @@ const VideoSection = () => {
         </motion.div>
 
         <motion.p
-          className="text-center mt-6 md:mt-8 text-gray-500 text-sm font-medium"
+          className="text-center mt-8 md:mt-10 text-gray-500 text-sm font-medium"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
