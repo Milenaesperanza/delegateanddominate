@@ -54,7 +54,7 @@ const VideoSection = () => {
           {/* Glow rojo fuerte */}
           <div
             className="absolute -inset-4 rounded-3xl blur-2xl"
-            style={{ background: "radial-gradient(ellipse at center, #cc0000 0%, #8B000070 40%, transparent 75%)" }}
+            style={{ background: "radial-gradient(ellipse at center, #ffffff30 0%, #ffffff10 40%, transparent 75%) }}
           />
 
           {/* Marco rojo brillante */}
