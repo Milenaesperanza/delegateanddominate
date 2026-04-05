@@ -78,8 +78,12 @@ const HeroSection = () => {
                     <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Intro video</li>
                     <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Delegation checklist</li>
                   </ul>
-                  <a href="https://api.leadconnectorhq.com/widget/form/oY3OAgseHC3FhWkXILyS" target="_blank" rel="noopener noreferrer" className="mt-4 block">
-                    <Button variant="outline" className="w-full font-bold">
+                  <div className="mt-4 block">
+                   <Button
+                   variant="outline"
+                   className="w-full font-bold"
+                   onClick={() => setOpenFree(true)}
+                   >
                       Get Free Access
                     </Button>
                   </a>
