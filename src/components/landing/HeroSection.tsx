@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import kasimLogo from "@/assets/kasim-logo.png";
 import heroBg from "@/assets/hero-bg.png";
+import TicketModal from "@/components/landing/TicketModal";
 
 const HeroSection = () => {
   return (
