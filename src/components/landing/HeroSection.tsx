@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import kasimLogo from "@/assets/kasim-logo.png";
 import heroBg from "@/assets/hero-bg.png";
-import kasimOverlay from "@/assets/hero-bg-kasim.png";
 
 const HeroSection = () => {
   return (
@@ -14,15 +13,12 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Capa 2: overlay blanco para que el texto sea legible */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
-
-      {/* Capa 3: Kasim PNG transparente encima del fondo, alineado derecha */}
-      <img
-        src={kasimOverlay}
-        alt=""
-        aria-hidden="true"
-        className="absolute right-0 top-0 h-full w-auto object-cover object-right pointer-events-none select-none"
+      {/* Capa 2: gradiente solo hacia la izquierda, se desvanece antes de llegar al público */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 25%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0.1) 55%, transparent 65%)"
+        }}
       />
 
       {/* Header / Logo */}
