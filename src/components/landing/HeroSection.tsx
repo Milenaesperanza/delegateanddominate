@@ -111,6 +111,10 @@ const HeroSection = () => {
       >
         Trusted by hundreds of founders worldwide
       </motion.div>
+      
+      {/* Fade hacia abajo */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-gray-50 z-10" />
+      
     </section>
   );
 };
