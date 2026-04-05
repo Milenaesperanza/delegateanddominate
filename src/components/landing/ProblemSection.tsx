@@ -84,7 +84,7 @@ const ProblemSection = () => {
             {/* REEMPLAZAR src con imagen final generada en Ideogram */}
             <div className="w-full aspect-square max-w-sm rounded-2xl bg-gray-900 border border-gray-700 flex items-center justify-center">
               <p className="text-gray-600 text-sm font-bold uppercase tracking-widest text-center px-6">
-                Imagen pendiente
+                Image Coming Soon
               </p>
             </div>
           </motion.div>
