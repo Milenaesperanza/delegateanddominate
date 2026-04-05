@@ -61,7 +61,7 @@ const VideoSection = () => {
           <div
             className="relative rounded-2xl overflow-hidden aspect-video"
             style={{
-              border: "2px solid #cc0000",
+              border: "2px solid white,
               boxShadow: "0 0 30px #cc000080, 0 0 60px #8B000050, 0 0 100px #8B000030"
             }}
           >
@@ -87,7 +87,7 @@ const VideoSection = () => {
         </motion.div>
 
         <motion.p
-          className="text-center mt-8 md:mt-10 text-gray-500 text-sm font-medium"
+          className="text-center mt-8 md:mt-10 text-white text-sm font-medium"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
