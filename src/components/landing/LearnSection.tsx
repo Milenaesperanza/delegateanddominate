@@ -35,7 +35,7 @@ const LearnSection = () => {
     <section
       className="relative py-20 md:py-32"
       style={{
-        background: "linear-gradient(180deg, #111111 0%, #2a2a2a 40%, #888888 100%)"
+        background: "linear-gradient(180deg, #111111 0%, #2a2a2a 40%, #555555 100%)"
       }}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
@@ -64,8 +64,8 @@ const LearnSection = () => {
               key={i}
               className="rounded-2xl p-6 md:p-8 relative overflow-hidden"
               style={{
-                backgroundColor: "#d0d0d0",
-                border: "1px solid #bbbbbb",
+                backgroundColor: "#444444",
+                border: "1px solid #555555",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.10)"
               }}
               initial={{ opacity: 0, y: 20 }}
