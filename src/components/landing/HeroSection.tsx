@@ -6,6 +6,13 @@ import heroBg from "@/assets/hero-bg.png";
 import TicketModal from "@/components/landing/TicketModal";
 
 const HeroSection = () => {
+  
+  const [openFree, setOpenFree] = useState(false);
+  const [openVip, setOpenVip] = useState(false);
+
+  const FREE_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/oY3OAgseHC3FhWkXILyS";
+  const VIP_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/ZZPPijOKNcbAqg2iFtxK";
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
 
