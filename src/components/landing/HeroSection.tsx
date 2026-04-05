@@ -16,6 +16,7 @@ const HeroSection = () => {
       {/* Capa 2: gradiente solo hacia la izquierda, se desvanece antes de llegar al público */}
       <div
         className="absolute inset-0"
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/30 to-transparent z-10" />
         style={{
           background: "linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.85) 25%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 55%, transparent 60%)"
         }}
