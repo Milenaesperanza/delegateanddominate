@@ -9,8 +9,8 @@ const HeroSection = () => {
 
       {/* Capa 1: fondo base */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: "top center" }}
       />
 
       {/* Capa 2: gradiente solo hacia la izquierda, se desvanece antes de llegar al público */}
@@ -24,7 +24,7 @@ const HeroSection = () => {
       {/* Header / Logo */}
       <header className="relative z-20 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
-          <img src={kasimLogo} alt="Kasim Aslam" className="h-10 md:h-14 w-auto" />
+          <img src={kasimLogo} alt="Kasim Aslam" className="h-14 md:h-16 w-auto" />
           <a href="#tickets">
             <Button variant="cta" size="sm" className="px-4 py-2 text-sm font-bold tracking-wide">
               Save My Seat
