@@ -162,7 +162,7 @@ const HeroSection = () => {
 
       {/* Trust line */}
       <motion.div
-        className="relative z-10 pb-6 text-center text-sm font-semibold bg-black/40 py-3 text-white backdrop-blur-sm"
+        className="relative z-10 pb-6 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
