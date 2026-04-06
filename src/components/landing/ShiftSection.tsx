@@ -11,7 +11,9 @@ const ShiftSection = () => {
     <section
       className="relative py-20 md:py-32"
       style={{
-        background: "linear-gradient(180deg, #555555 0%, #888888 50%, #bbbbbb 100%)"
+      backgroundImage: "url('/src/assets/burnout-man.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center"
       }}
     >
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
