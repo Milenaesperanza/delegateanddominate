@@ -82,7 +82,7 @@ const FinalCTASection = () => {
                       className="w-full bg-white text-primary font-black hover:bg-white/90 shadow-lg"
                       onClick={() => setOpenVip(true)}
                     >
-                      Save My VIP Seat →
+                      Save My VIP Seat
                     </Button>
                   </div>
                 </div>
