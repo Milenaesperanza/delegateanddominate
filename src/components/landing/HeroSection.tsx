@@ -7,7 +7,6 @@ import TicketModal from "@/components/landing/TicketModal";
 
 const HeroSection = () => {
   const [openFree, setOpenFree] = useState(false);
-  const [openVip, setOpenVip] = useState(false);
 
   const FREE_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/oY3OAgseHC3FhWkXILyS";
   const VIP_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/ZZPPijOKNcbAqg2iFtxK";
@@ -44,7 +43,7 @@ const HeroSection = () => {
             variant="cta"
             size="sm"
             className="px-4 py-2 text-sm font-bold tracking-wide"
-            onClick={() => setOpenVip(true)}
+            onClick={() => window.open("/vip-seat", "_blank")}
           >
             Save My Seat
           </Button>
@@ -142,12 +141,12 @@ const HeroSection = () => {
                   </ul>
 
                   <div className="mt-4 block">
-                    <Button
-                      className="w-full bg-white text-primary font-black hover:bg-white/90"
-                      onClick={() => setOpenVip(true)}
-                    >
-                      Save My VIP Seat
-                    </Button>
+                  <Button
+                  className="w-full bg-white text-primary font-black hover:bg-white/90"
+                  onClick={() => window.open("/vip-seat", "_blank")}
+                  >
+                  Save My VIP Seat
+                  </Button>
                   </div>
                 </div>
               </div>
@@ -176,13 +175,6 @@ const HeroSection = () => {
         onOpenChange={setOpenFree}
         title="Get Free Access"
         embedUrl={FREE_EMBED_URL}
-      />
-
-      <TicketModal
-        open={openVip}
-        onOpenChange={setOpenVip}
-        title="Save My VIP Seat"
-        embedUrl={VIP_EMBED_URL}
       />
     </section>
   );
