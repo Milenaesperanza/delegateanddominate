@@ -6,7 +6,6 @@ import TicketModal from "@/components/landing/TicketModal";
 
 const FinalCTASection = () => {
   const [openFree, setOpenFree] = useState(false);
-  const [openVip, setOpenVip] = useState(false);
 
   const FREE_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/oY3OAgseHC3FhWkXILyS";
   const VIP_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/ZZPPijOKNcbAqg2iFtxK";
@@ -80,7 +79,7 @@ const FinalCTASection = () => {
                   <div className="mt-4">
                     <Button
                       className="w-full bg-white text-primary font-black hover:bg-white/90 shadow-lg"
-                      onClick={() => setOpenVip(true)}
+                      onClick={() => window.open("/vip-seat", "_blank")}
                     >
                       Save My VIP Seat
                     </Button>
@@ -119,13 +118,6 @@ const FinalCTASection = () => {
         onOpenChange={setOpenFree}
         title="Get Free Access"
         embedUrl={FREE_EMBED_URL}
-      />
-
-      <TicketModal
-        open={openVip}
-        onOpenChange={setOpenVip}
-        title="Save My VIP Seat"
-        embedUrl={VIP_EMBED_URL}
       />
     </section>
   );
