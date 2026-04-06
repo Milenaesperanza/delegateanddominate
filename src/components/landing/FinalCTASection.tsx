@@ -12,7 +12,7 @@ const FinalCTASection = () => {
   const VIP_EMBED_URL = "https://api.leadconnectorhq.com/widget/form/ZZPPijOKNcbAqg2iFtxK";
 
   return (
-    <section className="py-20 md:py-28 bg-[#111111] text-white relative overflow-hidden">
+    <section className="py-20 md:py-28 text-white relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f5f5f5 0%, #111111 12%)" }}>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
