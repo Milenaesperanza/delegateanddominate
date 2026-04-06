@@ -61,7 +61,7 @@ const HeroSection = () => {
               transition={{ duration: 0.7 }}
             >
               <span className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full shadow-md mb-6 md:mb-8">
-                🔴 Live Webinar · April 26 · Only 100 Seats
+                🔴 Live Webinar · April 26th, 11 AM · Only 100 Seats
               </span>
 
               <h1
