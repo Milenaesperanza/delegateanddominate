@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import burnoutMan from "@/assets/burnout-man.png";
 
 const ShiftSection = () => {
   const parts = [
@@ -10,17 +9,14 @@ const ShiftSection = () => {
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
+      <section
+      className="relative py-20 md:py-32"
+     style={{
+      background: "linear-gradient(180deg, #555555 0%, #888888 50%, #bbbbbb 100%)"
+     }}
+    >
 
-      {/* Imagen de fondo con blur */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${burnoutMan})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(3px) brightness(0.5)",
-          transform: "scale(1.05)"
-        }}
+      }
       />
 
       {/* Overlay gradiente */}
